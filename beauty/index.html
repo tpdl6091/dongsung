@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>동성 뷰티 - 화장품 쇼핑몰</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo" id="logo">DONGSUNG <span>BEAUTY</span></a>
+    <input type="search" id="search" placeholder="상품 검색" aria-label="상품 검색">
+    <button class="cart-btn" id="cartBtn" aria-label="장바구니 열기">🛒 장바구니 <b id="cartCount">0</b></button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>오늘의 아름다움을 완성하세요</h1>
+  <p>스킨케어부터 메이크업, 도구까지 한 곳에서</p>
+</section>
+
+<main class="container">
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-cat="all">전체</button>
+    <button class="tab" data-cat="skincare">스킨케어</button>
+    <button class="tab" data-cat="makeup">메이크업</button>
+    <button class="tab" data-cat="tools">메이크업 도구</button>
+  </nav>
+  <div class="toolbar">
+    <span id="resultCount"></span>
+    <select id="sort" aria-label="정렬">
+      <option value="default">기본순</option>
+      <option value="low">낮은 가격순</option>
+      <option value="high">높은 가격순</option>
+      <option value="name">이름순</option>
+    </select>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>검색 결과가 없습니다.</p>
+</main>
+
+<footer class="footer">© 2026 DONGSUNG BEAUTY · 데모 쇼핑몰</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <h2>장바구니</h2>
+    <button id="closeCart" aria-label="닫기">✕</button>
+  </div>
+  <ul class="cart-list" id="cartList"></ul>
+  <div class="drawer-foot">
+    <div class="total"><span>합계</span><strong id="cartTotal">0원</strong></div>
+    <button class="primary" id="checkout">주문하기</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
